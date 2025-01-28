@@ -23,19 +23,20 @@
             text-align: center;
             color: #fff;
             z-index: 1;
+            padding: 20px;
         }
 
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
             animation: fadeIn 2s ease;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
             animation: fadeIn 2s ease 1s;
             font-weight: 300;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
@@ -53,8 +54,8 @@
 
         .heart {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: red;
             opacity: 0.8;
             transform: rotate(45deg);
@@ -65,19 +66,19 @@
         .heart::after {
             content: '';
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: red;
             border-radius: 50%;
         }
 
         .heart::before {
-            top: -25px;
+            top: -20px;
             left: 0;
         }
 
         .heart::after {
-            left: 25px;
+            left: 20px;
             top: 0;
         }
 
@@ -91,8 +92,8 @@
 
         .static-heart {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: red;
             opacity: 0.9;
             transform: rotate(45deg);
@@ -102,19 +103,19 @@
         .static-heart::after {
             content: '';
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: red;
             border-radius: 50%;
         }
 
         .static-heart::before {
-            top: -25px;
+            top: -20px;
             left: 0;
         }
 
         .static-heart::after {
-            left: 25px;
+            left: 20px;
             top: 0;
         }
 
@@ -137,13 +138,29 @@
                 opacity: 1;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .heart, .heart::before, .heart::after, .static-heart, .static-heart::before, .static-heart::after {
+                width: 30px;
+                height: 30px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="message-container">
-        <h1>Happy Birthday😘❤️!</h1>
-        <p>Wishing you all the happiness in the world on your special day!🎂✨</p>
-        <p>May your year ahead be filled with love, joy, and unforgettable memories.🥳</p>
+        <h1>Happy Birthday 🎉❤️!</h1>
+        <p>Wishing you all the happiness in the world on your special day! 🎂✨</p>
+        <p>May your year ahead be filled with love, joy, and unforgettable memories. 🥳</p>
+        <p>You are the sunshine that brightens every room, the star that lights up every night, and the love that fills every heart. On this beautiful day, I hope you feel as cherished as you truly are. Here's to laughter, surprises, and every little thing that makes your heart smile. Happy Birthday, and remember, the best is yet to come! 🌟💖</p>
     </div>
     <div class="hearts">
         <!-- Hearts will be dynamically generated -->
@@ -154,6 +171,8 @@
         <div class="static-heart" style="bottom: 100px; left: 20%;"></div>
         <div class="static-heart" style="top: 10%; right: 5%;"></div>
         <div class="static-heart" style="top: 20%; left: 5%;"></div>
+        <div class="static-heart" style="top: 25%; right: 30%;"></div>
+        <div class="static-heart" style="bottom: 10%; left: 40%;"></div>
     </div>
 
     <script>
@@ -169,7 +188,7 @@
             setTimeout(() => heart.remove(), 5000);
         }
 
-        setInterval(createHeart, 300);
+        setInterval(createHeart, 200);
     </script>
 </body>
 </html>
